@@ -1,3 +1,8 @@
+												Homework	JS I
+
+
+
+
 	* Variables
 		Las variables son espacios en la memoria donde podemos guardar distintos tipos de datos.
 		Tipos de datos:

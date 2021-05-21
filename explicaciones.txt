@@ -1,0 +1,71 @@
+	* Variables
+		Las variables son espacios en la memoria donde podemos guardar distintos tipos de datos.
+		Tipos de datos:
+						- Srtings: (cadena de caractres) lo que se conoce como palabras ;
+						- Numbers: Pueden ser numeros positivos, negativos o flotantes (con coma);
+						- Valores Booleanos: Estos pueden tomar solo dos valores. TRUE (verdadero) o FALSE (falso). se usan para comparaciones.;
+
+	* Strings
+		Son cadenas de caracteres, lo que se conoce como palabras. Se situan dentro de comillas para que puedan ser interpretadas como tales.;
+
+	* Funciones (argumentos, `return`)
+		Las funciones son como sub programas o mini programas dentro del codigo que se utilizan para no repetir instrucciones y asi simplificar la programacion.;
+		estas se declaran de la siguiente forma:
+		
+		FUNCTION nombrefuncion (Argumentos){
+			CUERPO DE LA FUNCION;
+		}
+
+		Luego para invocarlas y asi utilizarlas se hace de la siguiente manera:
+
+		nombrefuncion (valores para los argumentos);
+
+		Los argumentos son las variables que vamos a necesitar en nuestra funcion para poder realizar las tareas que le hallamos designado. Estas se declaran dentro de los parentesis y se separan con comas.
+
+		Ej.
+
+		FUNCTION suma (a, b){
+		CONSOLE.LOG (a + b);
+		}
+
+		En este ejemplo lo que hicimos fue declarar una funcion llamada "suma" que va a recibir dos datos, los va a sumar y va a imprimir el resultado en pantalla.
+
+		Para invocarla tendriamos que hacerlo de la siguiente manera:
+
+		suma (3, 4);
+
+		y el resultado que nos arrojaria en pantalla seria 7.
+
+		Todos los resultados o productos que arrojen las funciones no son utilizables desde fuera de estas, por lo que para poder alcanzarlos debemos utilizar la declaracion RETURN.
+		Esta declaracion lo que hace es que lo que la funcion esta retornando, sea utilizable desde el exterior de la misma. 
+		Solo es posible utilizar una declaracion RETURN dentro de la funcion, puesto que todo lo que venga despues, no sera leido por el interprete y la funcion termina.
+
+		Ej.
+
+		FUNCTION multiplicacion (a, b){
+		VAR resultado = a * b
+		RETURN resultado;
+		}
+
+
+	* Declaraciones `if`
+
+		Las declaraciones If se utilizan para agregarle logica al codigo. Con esta funcion el programa se hace preguntas y dependiendo de la respuesta ejecuta un codigo u otro.
+
+		Ej.
+
+		FUNCTION menor (a){
+		IF (a < 18){
+		return "Sos menor de edad";
+		}
+		else {
+		return "Sos mayor de edad";
+		}
+		}
+
+		Lo que hace esta funcion es pedirle la edad al usuario. Se pregunta si este dato es menor que 18, si esto es cierto devuelve "Sos menor de edad". Si no es cierto, es decir si es igual o mayor que 18, devuelve "Sos mayor de edad".
+
+
+	* Valores booleanos (`true`, `false`)
+
+	Los valores Booleanos TRUE o FALSE son respuestas a las preguntas hechas por los condicionales o comparadores. Estos pueden tomar solo dos valores True (verdadero) o False (falso).

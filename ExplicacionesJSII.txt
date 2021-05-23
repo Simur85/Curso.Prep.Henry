@@ -1,0 +1,79 @@
+JSII
+
+For
+
+La función FOR es un bucle que repetirá un código N veces mientras se cumpla una condición determinada. Esta función se utiliza para ejecutar código repetitivo 
+sin la necesidad de escribirlo una y otra vez.
+
+La estructura del FOR es la siguiente:
+
+FOR (var i = 1; i <= 10; i ++){
+CONSOLE.LOG (i);
+}
+
+Lo que va dentro del paréntesis se divide en tres partes.
+La primera es la declaración e iniciación de la variable que se va a usar para la contabilización de veces que se va a repetir el ciclo
+La segunda es la condición, que mientras sea válida, el ciclo se repetirá.
+la tercera es la acción de incrementar la variable en 1 para así saltar al próximo ciclo.
+
+Esto funcionará de la siguiente manera:
+
+El for declara e inicializa la variable i en 1, pregunta si i es menor o igual a 10. Si lo es, ejecuta el codigo que le indicamos, en este caso le dijimos que 
+imprima en pantalla el valor de i. Una vez ejecutado el codigo procederá a incrementar i en 1 y volver a preguntar si es que i es menor o igual a 10. Si es cierto,
+volverá a ejecutar el código y a incrementar i en 1.
+Este proceso lo hará tantas veces como sea necesario hasta que la condición que le asignamos sea falsa. Una vez que, hecha la pregunta, de como resultado FALSE,
+El ciclo se para automáticamente y sale del bucle.
+En este caso el bucle que construimos imprimirá en pantalla los números del 1 al 10.
+
+
+
+Operadores Logicos
+
+
+&& 
+Esta expresion significa "y". Se usa en los condicionales como el If o el While. 
+
+Ej.
+
+if(a >2 && b <5){
+}
+
+Esto querria decir que el codigo dentro del if se ejecutará siempre y cuando la condicion que a sea mayor que 2 "y" que b sea menor que 5
+
+
+||
+Esta expresion significa "o". Se usa en los condicionales como el If o el While. 
+
+Ej.
+
+if(a >2 || b <5){
+}
+
+Esto querria decir que el codigo dentro del if se ejecutará siempre y cuando la condicion que a sea mayor que 2 "o" que b sea menor que 5
+
+
+!
+Esta expresion significa "negado", o "lo contrario de" y se puede usar en dos casos:
+
+para cambiar un valor booleano
+
+Ej:
+
+var estado = true
+
+!estado	//false
+
+para pasar un valor de numero o string a booleano.
+
+Ej:
+
+var numero = 2
+
+!numero	//false
+
+var letra ="d"
+
+!letra	//false
+
+Para entender esto hay que tener en cuenta que JS toma a todos los numeros con excepcion del 0 como true y al 0 con false. Y a las string las toma a todas como true, 
+salvo una string vacia("") que la toma como false.

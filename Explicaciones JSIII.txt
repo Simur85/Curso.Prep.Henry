@@ -3,7 +3,7 @@ Homework JSIII
 Arrays o arreglos
 
 
-Sos un tipo de dato, no son un dato primitivo como los numeros o los strings sino una construccion. Son una lista ordenada
+Son un tipo de dato, no son un dato primitivo como los numeros o los strings sino una construccion. Son una lista ordenada
 que pueden contener cualquier tipo de elementos, funciones u otros arrays.
 Los elementos se guardan dentro de esta variable y son accesibles mediante el uso de un indice.
 La forma de crearlos y de llamarlos es la siguente:

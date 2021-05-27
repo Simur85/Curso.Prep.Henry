@@ -1,0 +1,53 @@
+Homeworkd JSV
+
+Constructores de clases y objetos
+
+Para construir objetos y definir su clase, lo debemos hacer mediante una función constructora. Que se escribe de la siguiente manera:
+
+function Frutas(tamaño, color, peso){
+	this.tamaño = tamaño;
+	this.color = color;
+	this.peso = peso;
+}
+
+De esta manera lo que hicimos fue una función cuyo objetivo es crear objetos y asignarles una clase. En este caso la clase de todos los objetos creados con esta función va a ser Frutas.
+**Nota: Por convención siempre hay que empezar con mayúscula a las funciones constructoras.
+La expresión this, se usa para referenciar al objeto que va a ser creado.
+
+Luego para usar esta función y crear objetos, se hace de la siguiente manera:
+
+var banana = new Frutas(‘mediano’, ‘amarillo’, 1.5); // Frutas {tamaño: "mediano", color: "amarillo", peso: 1.5}
+
+En este ejemplo lo que acabamos de hacer es crear un objeto banana de la clase Frutas con las propiedades tamaño mediano, color amarillo y peso 1.5
+
+
+
+Prototipo
+
+Los prototipos son como el modelo de objeto desde donde se hace referencia al usar un objeto. 
+Vendría a ser la clase contenedora superior de un objeto.
+
+Ej.
+
+Function Auto(marca, modelo, año){
+	this.marca = marca;
+	this.modelo = modelo;
+	this.año = año;
+}
+var miAuto = new Auto(‘Nissan’, ‘Pathfinder’, 1997)
+En este ejemplo, el prototipo de miAuto es Auto.
+
+Para saber cual es el prototipo de algún elemento:
+
+miAuto.__proto__ // Auto
+
+En JS todo son objetos, por eso si realizamos esa verificación con cualquier objeto, nos va a indicar cuál es su prototipo.
+Cuando utilizamos una propiedad de un objeto, por ejemplo el .length en las strings. Eso es un método del objeto Strings. Donde Strings es el prototipo de todos los objetos string que utilizamos generalmente.
+cuando llamamos a una propiedad, como lo dijimos anteriormente, si nuestro objeto no la contiene, el intérprete va a ir a buscarla a su prototipo, si éste la contiene la va a utilizar, y si no va a seguir subiendo hacia el siguiente prototipo.
+Ej.
+var array = [1, 2, 3];
+
+array.push(4);
+
+En este ejemplo, cree un array, que contiene las propiedades 1, 2 y 3. Luego llame a un método del array llamado push, (que es una función del objeto que lo que hace es agregar un elemento al final del arreglo).
+La propiedad push, no está definida en nuestro array, este solo contiene 1, 2 y 3. pero al llamar a ese método, el intérprete lo busca en nuestro array, y si no lo encuentra, lo va a buscar al prototipo de array. Que ese es el que tiene todas las propiedades y métodos para que los próximos elementos puedan usarlas)

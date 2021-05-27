@@ -1,0 +1,98 @@
+Homework JSIV	
+
+
+* Objetos
+
+Un objeto es un elemento que construimos para almacenar de manera ordenada distintos tipos de datos e informacion.
+Es parecido a un array, con la diferencia que los indices no son numericos sino strings. 
+Y al ser alamcenados dentro de etiquetas, la localizacion y orden de los datos que contiene en sus propiedades
+se hace mas sencilla. 
+Dentro de un objeto podemos almacenar cualquier tipo de datos: numeros, strings, booleanos, arrays, funciones u
+otros objetos.
+
+* Propiedades
+
+Las propiedades son como los argumentos en los arrays, son las diferentes secciones donde vamos a ir almacenando nuestros
+datos dentro de los objetos.
+
+Ej.
+
+var Gato = {
+ 	nombre:"pachi",
+	edad:2,
+	peso:1.5,
+     }
+
+En este caso, creamos un objeto llamado Gato que contiende las propiedades [nombre, edad, peso].
+dentro de esas propiedades, asignamos los datos que queremos guardar para luego poder acceder a ellos. Es importante 
+poner una coma luego de asignarle el valor a una propiedad.
+
+Gato.nombre	//"Pachi"
+Gato.edad	//2
+Gato.peso	//1.5
+
+
+* Métodos
+
+Los metodos son las funciones que creamos dentro de nuestros objetos.
+
+Ej.
+
+var Perro = {
+	nombre:"Ayudante de Santa",
+	edad: 4,
+	peso: 7,
+	sonido: function ladrido(){
+		console.log("Guau!")
+		}
+}
+
+En este caso, ladrido seria un metodo de Perro. y es accesible de la siguiente manera.
+
+Perro.sonido()	//Guau!
+
+ 	
+* Bucle `for…in`
+
+Bucle o ciclo For In es muy similar a el for clasico, con la diferencia que este esta diseñado para recorrer objetos.
+
+for (var i in estudiante){
+    //aqui ponemos las instrucciones a realizar por cada una de las propiedades de nuestro objeto
+
+En este caso, el for crea la variable i y se va a ejecutar dentro del objeto estudiante. Con este bucle no tenemos 
+condicion, recorrera todas sus propiedades.
+
+
+
+
+* Notación de puntos vs notación de corchetes
+
+Dentro de los objetos tenemos dos tipos de notaciones para llamarlos y acceder a ellos.
+
+Bracket Notation (Notacion por corchetes)
+
+Es muy similar a la sintaxis de los arrays.
+
+Ej.
+
+Perro["edad"]
+
+En este caso estamos llamando al objeto perro, y a la propiedad "edad"
+Este metodo de notacion es mas incomodo para escribir pero nos habilita para poner variables dentro de los corchetes.
+
+Ej.
+
+var a = "edad"
+Perro[a]
+
+En este caso, seria lo mismo poner  Perro[a]  que poner Perro["edad"].
+
+Dot Notation (Notacion por puntos)
+
+La notacion por puntos es mas sencilla y comoda de escribir, aunque su desventaja es que es mas literal, ya que con ella
+no podemos incluir variables ni otros elementos, solo las propiedades que tenga nuestro objeto.
+
+Ej.
+
+Perro.edad	//4
+Perro.nombre	//"Ayudante de Santa"

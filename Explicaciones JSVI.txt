@@ -1,0 +1,75 @@
+Homework JSVI
+
+Funciones Callback
+
+Se conoce como funciones Callback, a aquellas funciones que son introducidas como argumentos desde otras funciones.
+
+Ej.
+
+function decirHola(nombre){
+	return ‘Hola ‘ + nombre + ‘!’
+}
+
+function decirChau(nombre){
+	return ‘Chau ’ + nombre + ‘!’
+}
+
+function selector(usuario, callback){
+	return callback(usuario);
+}
+
+
+
+En este ejemplo lo que hicimos fue primero crear dos funciones, una que saluda y una que se despide. Luego creamos 
+una función para seleccionar si queremos saludar o despedirnos. En esta última función (selector) vamos a poner como 
+argumentos que reciba el nombre de usuario y la función que queremos escoger.
+
+si queremos saludar ------->		selector(‘Daniel’, decirHola);		//Hola Daniel!
+si queremos despedirnos --->		selector(‘Daniel’, decirChau);		//Chau Daniel!
+
+
+Funcionamiento interno de la función selector::
+
+> introducimos los argumentos de nombre y la función que queremos utilizar
+> la variable usuario toma el nombre que introdujimos y la variable callback toma el nombre de la función que introdujimos
+> la variable callback va a ser reemplazada por lo que tiene en su interior (nombre de la función que elegimos),
+  va a ser ejecutada la función correspondiente y va a ser retornada.
+
+** La variable Callback, fue nombrada así en este ejercicio, pero puede tener cualquier nombre. Por convención se la
+   llama cb para que cualquiera sepa que ese argumento es un callback y que le debemos ingresar una función.
+
+** Al momento de ejecutar selector, e ingresar la función en el argumento, esto se debe hacer sin los parentesis 
+   (sin invocarla). Ya que si lo hacemos con estos, estaríamos invocando a la función y ese argumento tomará el valor
+   que devuelve la función al ser invocada sin argumentos).
+
+Ej.
+Si ingresamos la función en el argumento con los paréntesis (invocada)
+
+selector(usuario, callback());
+
+Esto sería lo mismo que ingresar en los argumentos:
+
+selector(usuario, ‘Hola undefined! / ‘Chau undefined!’’)
+
+
+Esto es asi porque si ejecutamos la funcion decirHola o decirChau sin argumentos, esta devolverá:
+
+decirHola();	//Hola undefined!
+
+Y al ingresarla invocada en el argumento, esta se ejecuta y devuelve su valor.
+
+** Cuando se ejecuta la función que fue llamada por argumento (callback), la entrada o argumento de esta función
+   (decirHola o decirChau) va a ser el argumento que introdujimos en la función selectora. (En este caso, en la función
+   selectora introdujimos el nombre en la variable usuario, y este va a ser almacenado para usarse en la variable 
+   nombre de la funcion decirHola o decirChau.)
+
+** Las funciones en los argumentos se pueden llamar como callbacks o se pueden definir en ese momento.
+Ej.
+
+selector(‘Daniel’, decirHola);	
+	De esta manera la estamos llamando como un callback
+
+selector(‘Daniel’, function decirHola(nombre){return ‘Hola ‘ + nombre + ‘!’});
+	De esta manera la estamos definiendo en el argumento. Y su argumento tomará el valor del argumento 
+        que ingresamos en la función selector (En este caso “Daniel”)
+

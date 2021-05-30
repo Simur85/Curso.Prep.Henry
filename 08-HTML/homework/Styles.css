@@ -1,0 +1,50 @@
+body{
+	background:url(https://media-cdn.tripadvisor.com/media/photo-s/06/2b/28/ac/pizzaria-guerrin.jpg) ;
+	background-size: 100%;
+}
+
+div h1{
+	text-align: center;
+}
+
+
+div h3{
+	text-align: center;
+	color: white;
+
+}
+div h4{
+	text-align: center;
+	color: white;
+}
+
+div	h1{
+	color: blue;
+}
+
+div ul li img{
+	width: 400px;	
+}
+
+div{
+	margin-left: auto;
+	margin-right: auto;
+}
+#thirdDiv{
+	width: 500px;
+	height: 600px;
+	background-color: yellow;
+	padding: 50px;
+	border: 2px solid black
+}
+
+#spanId{
+	font-size: 18px;
+	margin: 50px;
+	color: white;
+
+
+}
+
+
+
